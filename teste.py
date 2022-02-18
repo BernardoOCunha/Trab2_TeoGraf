@@ -42,12 +42,10 @@ class Grafo:
         self.representacao = escolha
         self.nomeGrafo = grafo_txt[len(grafo_txt)-15:len(grafo_txt)-4]
 
-        #while(True):
-        #    self.temPesos = input("O grafo possui pesos (sim/nao)? ")
-        #    if self.temPesos == "sim" or self.temPesos == "nao":
-        #        break
-
-        self.temPesos = "sim"
+        while(True):
+            self.temPesos = input("O grafo possui pesos (sim/nao)? ")
+            if self.temPesos == "sim" or self.temPesos == "nao":
+                break
 
         if self.temPesos == "sim":
             self.temPesosNeg = False
