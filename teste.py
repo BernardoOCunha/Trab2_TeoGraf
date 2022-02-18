@@ -326,25 +326,25 @@ class Grafo:
 
  
 
-    def floyd_warshall(self):
-        d = deepcopy(self.matrix)
-        for i in range(self.nVertices):
-            d[i][i] = 0
-        pred = deepcopy(d)
-
-        for k in range(self.nVertices):
-            for i in range(self.nVertices):
-                for j in range(self.nVertices):
-                    if(d[i][j] > d[i][k] + d[k][j]):
-                        d[i][j] = d[i][k] + d[k][j]
-                        pred[i][j] = pred[k][j]
+    #def floyd_warshall(self):
+    #    d = deepcopy(self.matrix)
+    #    for i in range(self.nVertices):
+    #        d[i][i] = 0
+    #    pred = deepcopy(d)
+    #
+    #    for k in range(self.nVertices):
+    #        for i in range(self.nVertices):
+    #            for j in range(self.nVertices):
+    #                if(d[i][j] > d[i][k] + d[k][j]):
+    #                    d[i][j] = d[i][k] + d[k][j]
+    #                    pred[i][j] = pred[k][j]
         
         #for linha in d:
         #    print(linha)
         #print()
         #for linha in self.matrix:
         #    print(linha)
-        return d
+    #    return d
 
 
 
