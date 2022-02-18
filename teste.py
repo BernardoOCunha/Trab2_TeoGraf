@@ -384,10 +384,10 @@ class Grafo:
             else:
                 for vizinho in self.vetor[u]:
                     if dist[vizinho[0]] > dist_u + vizinho[1]:
-                        dist[vizinho[0]] = dist_u + aresta_uv
+                        dist[vizinho[0]] = dist_u + vizinho[1]
                         caminho[vizinho[0]] = caminho[u] + [vizinho[0]]
-                        arestas_mst[vizinho[0]] = (vizinho[0], u, aresta_uv)
-                        peso_total[vizinho[0]] = aresta_uv
+                        arestas_mst[vizinho[0]] = (vizinho[0], u, vizinho[1])
+                        peso_total[vizinho[0]] = vizinho[1]
 
         arestas_mst = arestas_mst[2:]
         peso = sum(peso_total) 
